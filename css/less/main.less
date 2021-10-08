@@ -1,0 +1,127 @@
+:root {
+	--clr-base: #000;
+	--clr-att: #5144DB;
+    --clr-title: #000;
+    --clr-border: #EEEEEE;
+
+	--min: 374px;
+	--max: 1430px;
+
+	font-size: 10px;
+}
+.sl-wrap~.sl-wrap {
+	display: none;
+}
+.elm-hidden {
+	display: none;
+}
+/* ----------------------------------- *\
+			main styles
+\* ----------------------------------- */
+body {
+	color: var(--clr-base, #000);
+    font-size: 14px;
+    line-height: 18/14;
+    background: #fff;
+}
+p, ul, ol {
+	position: relative;
+    margin-bottom: 18/14em;
+	img {
+		max-width: 100%;
+	}
+	&:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+li {
+	position: relative;
+}
+a {
+	text-decoration: none;
+	color: var(--clr-att, #5144DB);
+	&:hover {
+		text-decoration: none;
+		color: var(--clr-att, #5144DB);
+	}
+}
+a.link-main, .link-main {
+	text-decoration: none;
+	border-bottom: 1px solid;
+	&:hover {
+		border-bottom: none;
+	}
+}
+h1, .h1-title,
+h2, .h2-title,
+h3, .h3-title,
+h4, .h4-title,
+h5, .h5-title,
+h6, .h6-title {
+	display: block;
+	position: relative;
+    line-height: 28/24em;
+    font-weight: 500;
+    color: var(--clr-title);
+    margin: 1em 0 1em 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+h1, .h1-title {
+    font-size: 24px;
+}
+.h3-title, h3 {
+    font-size: 16px;
+    line-height: 1.25;
+}
+hr, .hr {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 1px;
+    clear: both;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: var(--clr-border);
+    margin: 0 0 35px 0;
+    &:before, &:after {
+    	content: "";
+    	display: block;
+    	width: 9999px;
+    	position: absolute;
+    	top: 0;bottom: 0;left: 100%;
+    	background: var(--clr-border);
+    }
+    &:before {
+    	left: auto;right: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .h1-title, h1 {
+        font-size: 28px;
+        line-height: 33/28;
+    }
+    .h3-title, h3  {
+        font-size: 18px;
+    }
+    hr, .hr {
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 1024px) {
+    .h1-title, h1 {
+        font-size: 32px;
+        line-height: 38/32;
+    }
+    hr, .hr {
+        margin-bottom: 40px;
+        &:before, &:after {
+            display: none;
+        }
+        &.desktop-hidden {
+            background: #fff;
+        }
+    }
+}
